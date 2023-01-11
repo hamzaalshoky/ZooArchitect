@@ -55,8 +55,6 @@ public class ZooArchitect
 
     private void setup(final FMLCommonSetupEvent event)
     {
-        //BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
-        //        ModItems.JAGUAR_TOOTH.get(), Potions.INVISIBILITY));
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());

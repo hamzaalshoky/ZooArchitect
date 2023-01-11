@@ -23,12 +23,19 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntityCreator.MANATEE,6843239, 7895924,
                     new Item.Properties().tab(ModCreativeModeTabs.AFRICA_TAB)));
 
+    public static final RegistryObject<Item> CAPYBARA_SPAWN_EGG = ITEMS.register("capybara_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityCreator.CAPYBARA,6843239, 7895924,
+                    new Item.Properties().tab(ModCreativeModeTabs.AFRICA_TAB)));
+
     public static final RegistryObject<Item> JAGUAR_TOOTH = ITEMS.register("jaguar_tooth",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTabs.AFRICA_TAB)));
 
     public static final RegistryObject<Item> JUNGLE_DAGGER = ITEMS.register("jungle_dagger",
             () -> new SwordItem(Tiers.STONE, 2, 3f,
                     new Item.Properties().tab(ModCreativeModeTabs.AFRICA_TAB)));
+
+    public static final RegistryObject<Item> MELON_ON_A_STICK = ITEMS.register("melon_on_a_stick",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTabs.AFRICA_TAB)));
 
     //526941190
 

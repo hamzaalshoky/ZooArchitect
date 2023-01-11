@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:melon"
+    },
+    "title": {
+      "translate": "advancements.husbandry.okipullup.title"
+    },
+    "description": {
+      "translate": "advancements.husbandry.okipullup.description"
+    }
+  },
+  "parent": "minecraft:husbandry/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "za:capybara",
+          "passenger": {
+            "type": "minecraft:player"
+          }
+        }
+      }
+    }
+  }
+}
