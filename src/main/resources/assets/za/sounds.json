@@ -1,0 +1,26 @@
+{
+  "lion_ambient": {
+    "subtitle": "sounds.za.lion_roars",
+    "sounds": [
+      "za:lion_ambient"
+    ]
+  },
+  "lion_hurt": {
+    "subtitle": "sounds.za.lion_hurt",
+    "sounds": [
+      "za:lion_hurt"
+    ]
+  },
+  "lion_death": {
+    "subtitle": "sounds.za.lion_death",
+    "sounds": [
+      "za:lion_death"
+    ]
+  },
+  "jaguar_pounce": {
+    "subtitle": "sounds.za.jaguar_pounce",
+    "sounds": [
+      "za:jaguar_pounce"
+    ]
+  }
+}

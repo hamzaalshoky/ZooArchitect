@@ -1,0 +1,16 @@
+{
+  "entity.za.jaguar": "Jaguar",
+  "item.za.jaguar_spawn_egg": "Jaguar Spawn Egg",
+  "item.za.manatee_spawn_egg": "Manatee Spawn Egg",
+  "item.za.jaguar_tooth": "Jaguar Tooth",
+  "item.za.jungle_dagger": "Jungle Dagger",
+  "itemGroup.africa_tab": "Zoo Architect Tab",
+  "death.attack.maul": "%1$s was mauled by a jaguar",
+  "death.attack.maul.player": "%1$s was mauled by a jaguar",
+  "sounds.za.lion_ambient": "Jaguar Croaks",
+  "sounds.za.lion_hurt": "Jaguar Hurts",
+  "sounds.za.lion_death": "Jaguar Dies",
+  "sounds.za.jaguar_pounce": "Jaguar Lunges",
+  "advancements.adventure.toothless.title": "Lost a tooth!",
+  "advancements.adventure.toothless.description": "Make a Jaguar Lose a tooth by blocking its Attack"
+}

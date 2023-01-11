@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "za:jaguar_tooth"
+    },
+    "title": {
+      "translate": "advancements.adventure.toothless.title"
+    },
+    "description": {
+      "translate": "advancements.adventure.toothless.description"
+    }
+  },
+  "parent": "minecraft:adventure/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "za:jaguar_tooth"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
