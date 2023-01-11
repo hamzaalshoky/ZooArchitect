@@ -66,16 +66,48 @@ public class CapybaraEntity extends Animal implements IAnimatable, ItemSteerable
     }
 
     protected void registerGoals() {
-        this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1.0D));
-        this.goalSelector.addGoal(0, new FloatGoal(this));
+        this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1.0D){
+            public boolean canUse() {
+                return !CapybaraEntity.this.isSleeping() && super.canUse();
+            }
+        });
+        this.goalSelector.addGoal(0, new FloatGoal(this){
+            public boolean canUse() {
+                return !CapybaraEntity.this.isSleeping() && super.canUse();
+            }
+        });
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.25D));
-        this.goalSelector.addGoal(3, new BreedGoal(this, 1.0D));
-        this.goalSelector.addGoal(4, new TemptGoal(this, 1.2D, Ingredient.of(ModItems.MELON_ON_A_STICK.get()), false));
-        this.goalSelector.addGoal(4, new TemptGoal(this, 1.2D, Ingredient.of(Items.MELON), false));
-        this.goalSelector.addGoal(4, new TemptGoal(this, 1.2D, Ingredient.of(Items.MELON_SLICE), false));
+        this.goalSelector.addGoal(3, new BreedGoal(this, 1.0D){
+            public boolean canUse() {
+                return !CapybaraEntity.this.isSleeping() && super.canUse();
+            }
+        });
+        this.goalSelector.addGoal(4, new TemptGoal(this, 1.2D, Ingredient.of(ModItems.MELON_ON_A_STICK.get()), false){
+            public boolean canUse() {
+                return !CapybaraEntity.this.isSleeping() && super.canUse();
+            }
+        });
+        this.goalSelector.addGoal(4, new TemptGoal(this, 1.2D, Ingredient.of(Items.MELON), false){
+            public boolean canUse() {
+                return !CapybaraEntity.this.isSleeping() && super.canUse();
+            }
+        });
+        this.goalSelector.addGoal(4, new TemptGoal(this, 1.2D, Ingredient.of(Items.MELON_SLICE), false){
+            public boolean canUse() {
+                return !CapybaraEntity.this.isSleeping() && super.canUse();
+            }
+        });
         this.goalSelector.addGoal(5, new FollowParentGoal(this, 1.1D));
-        this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 6.0F));
-        this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 6.0F){
+            public boolean canUse() {
+                return !CapybaraEntity.this.isSleeping() && super.canUse();
+            }
+        });
+        this.goalSelector.addGoal(8, new RandomLookAroundGoal(this){
+            public boolean canUse() {
+                return !CapybaraEntity.this.isSleeping() && super.canUse();
+            }
+        });
         this.goalSelector.addGoal(8, new CapybaraSleepGoal(this));
     }
 
@@ -292,13 +324,15 @@ public class CapybaraEntity extends Animal implements IAnimatable, ItemSteerable
             sleepProgress--;
         }
         if (!this.level.isClientSide) {
-            if (this.level.isNight() && this.getLastHurtByMob() == null && this.isInWaterOrBubble()) {
-                if (this.getRandom().nextInt(500) == 0) {
-                    this.setSleeping(true);
-                }
+            if (this.level.isNight() && this.getLastHurtByMob() == null) {
+                this.setSleeping(true);
             } else if (this.isSleeping()) {
                 this.setSleeping(false);
             }
+        }
+        if(this.isInWater()){
+            this.setPos(this.getX(), (double)(this.getBbHeight()) + 0.101D, this.getZ());
+            this.setDeltaMovement(this.getDeltaMovement().multiply(1.0D, 0.0D, 1.0D));
         }
     }
 

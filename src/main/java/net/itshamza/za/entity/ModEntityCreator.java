@@ -28,7 +28,7 @@ public class ModEntityCreator {
 
     public static final RegistryObject<EntityType<JaguarEntity>> JAGUAR = ENTITY_TYPES.register("jaguar", () -> EntityType.Builder.of(JaguarEntity::new, MobCategory.CREATURE).sized(1.4F, 1.4F).build(new ResourceLocation(ZooArchitect.MOD_ID, "jaguar").toString()));
     public static final RegistryObject<EntityType<ManateeEntity>> MANATEE = ENTITY_TYPES.register("manatee", () -> EntityType.Builder.of(ManateeEntity::new, MobCategory.WATER_CREATURE).sized(2.2F, 1.4F).build(new ResourceLocation(ZooArchitect.MOD_ID, "manatee").toString()));
-    public static final RegistryObject<EntityType<CapybaraEntity>> CAPYBARA = ENTITY_TYPES.register("capybara", () -> EntityType.Builder.of(CapybaraEntity::new, MobCategory.CREATURE).sized(2F, 1.4F).build(new ResourceLocation(ZooArchitect.MOD_ID, "capybara").toString()));
+    public static final RegistryObject<EntityType<CapybaraEntity>> CAPYBARA = ENTITY_TYPES.register("capybara", () -> EntityType.Builder.of(CapybaraEntity::new, MobCategory.CREATURE).sized(1F, 1.4F).build(new ResourceLocation(ZooArchitect.MOD_ID, "capybara").toString()));
 
     // ATTRIBUTES
 

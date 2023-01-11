@@ -24,7 +24,7 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTabs.AFRICA_TAB)));
 
     public static final RegistryObject<Item> CAPYBARA_SPAWN_EGG = ITEMS.register("capybara_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntityCreator.CAPYBARA,6843239, 7895924,
+            () -> new ForgeSpawnEggItem(ModEntityCreator.CAPYBARA,9591339, 4533538,
                     new Item.Properties().tab(ModCreativeModeTabs.AFRICA_TAB)));
 
     public static final RegistryObject<Item> JAGUAR_TOOTH = ITEMS.register("jaguar_tooth",
